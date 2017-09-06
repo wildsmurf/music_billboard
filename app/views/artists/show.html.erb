@@ -1,0 +1,12 @@
+<h1><%= @artist.name %></h1>
+
+<%= link_to 'Back', artists_path %>
+<%= link_to 'Add Some Songs', new_artist_song_path(@artist) %>
+
+<ol>
+<% @artist.songs.each do |song| %>
+
+  <li><%= song.name %></li>
+
+<% end %>
+</ol>

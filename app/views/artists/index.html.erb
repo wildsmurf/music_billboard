@@ -1,0 +1,9 @@
+<h1>Artists</h1>
+
+<%= link_to 'Add New Artist', new_artist_path %>
+<%= link_to 'Return to Billboards', billboards_path %>
+
+<% @artists.each do |artist| %>
+  <h3><%= link_to artist.name, artist_path(artist) %></h3>
+  <%= link_to 'Remove Artist', artist_path(artist), method: :delete %>
+<% end %>

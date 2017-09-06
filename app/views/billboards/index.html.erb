@@ -1,0 +1,9 @@
+<h1>All Your Top Music Billboards!</h1>
+
+<button class="ui positive basic button"><%= link_to 'Create a New Billboard', new_billboard_path %></button>
+<button class="ui negative basic button"><%= link_to 'View Artists', artists_path %></button>
+
+<% @billboards.each do |billboard| %>
+  <h3><%= link_to billboard.name, billboard_path(billboard) %></h3>
+  <%= link_to 'Delete', billboard_path(billboard), method: :delete %>
+<% end %>
